@@ -9,7 +9,7 @@
     </div>
 
     <div v-else v-for="user in users" :key="user.id" class="px-96">
-      <nuxt-link :to="`/users/${user.id}`">
+      <nuxt-link :to="{ name: 'users-id', params: { id: user.id }}">
         <div class="border-2 border-black flex items-center justify-center mb-5 py-2">
           <ul>
             <li>Nom : {{ user.name }}</li>
